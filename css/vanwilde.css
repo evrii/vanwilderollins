@@ -50,12 +50,16 @@ a:hover {
 
 .menuBar-buttons > li {
   display: inline-block;
-  margin-left: 50px;
-  margin-right: 50px;
+  display: table-cell;
+   vertical-align: top;
 }
-.menuBar-buttons > li + li {
-  margin-left: 20px;
+
+.menuBar-buttons > li > img {
+  padding-right: 0;
+  padding-left: 0;
+  display: block;
 }
+
 .menuBar-buttons > li > a {
   padding-right: 0;
   padding-left: 0;
@@ -64,6 +68,8 @@ a:hover {
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
+  display: block;
+  width: 200px;
 }
 .menuBar-buttons > li > a:hover,
 .menuBar-buttons > li > a:focus {
@@ -84,11 +90,22 @@ a:hover {
   }
   .menuBar-buttons {
     float: right;
+	display: table-row;
   }
 }
 
 #mainMenu {
 	display: inline-block;
+}
+
+#mainMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mainMenu ul li a {
+
 }
 
 .page-contents {
