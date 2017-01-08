@@ -1,15 +1,147 @@
 html,
 body {
 	height: 100%;
-	background-image: url("../images/DSC_0376.JPG");
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
 
 }
 
 body {
 	color: #fef;
 	text-align: center;
-	text-shadow: 0 1px 3px rgba(0,0,0,0,.5)
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Sizing and Centering */
+@media (min-width: 768px) {
+.menuBar {
+	display: fixed;
+	top: 0;
+
+}
+
+.footer {
+	display: fixed;
+	bottom: 0;
+}
+
+.displayArea {
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+}
+}
+
+@media (min-width: 900px) {
+.displayArea,
+.menuBar,
+.footer {
+	width: 700px;
+}
+}
+
+/*
+ * MenuBar Buttons
+ */
+
+.menuBar-buttons > li {
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.menuBar-buttons > li + li {
+  margin-left: 20px;
+}
+.menuBar-buttons > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.menuBar-buttons > li > a:hover,
+.menuBar-buttons > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.menuBar-buttons > .active > a,
+.menuBar-buttons > .active > a:hover,
+.menuBar-buttons > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .menuBar-buttons {
+    float: right;
+  }
+}
+
+#mainMenu {
+	display: inline-block;
+}
+
+.page-contents {
+	display: table;
+	width: 100%;
+	height: 100%; /* For at least Firefox */
+	min-height: 100%;
+	background-color: #7ba2e0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#names-heading {
+	font-family: 'Tangerine', serif;
+	font-size: 100px;
+	text-shadow: 3px 3px #000000;
+	font-weight:900;
+}
+
+.display-content {
+	font-family: 'Tangerine', serif;
+	font-size: 40px;
+	font-weight:900;
+}
+
+#locationText {
+	font-family: 'Tangerine', serif;
+	font-size: 30px;
+	font-weight:900;
+}
+
+#venueText {
+	font-family: 'Tangerine', serif;
+	font-size: 30px;
+	font-weight:900;
+}
+
+#ceremonyDateText {
+	font-family: 'Tangerine', serif;
+	font-size: 30px;
+	font-weight:900;
+}
+
+.panel {
+	opacity: 0.75;
+}
+
+.panel-body {
+	color: #000000;
+}
+
+.paddedImage {
+	padding: 10px;
+	
 }
