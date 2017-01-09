@@ -1,3 +1,14 @@
 .page-contents {
 	background-image: url("../images/dell_lea.png");
 }
+
+#venueHeading {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 30px;
+	font-weight:900;
+	color: white;
+}
+
+#venueCaption {
+	margin-top:300px;
+}

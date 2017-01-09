@@ -16,14 +16,6 @@ a:hover {
   color: #fff;
 }
 
-/* Sizing and Centering */
-@media (min-width: 768px) {
-.menuBar {
-	display: fixed;
-	top: 0;
-
-}
-
 .footer {
 	display: fixed;
 	bottom: 0;
@@ -33,14 +25,6 @@ a:hover {
 	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
-}
-}
-
-@media (min-width: 900px) {
-.displayArea,
-.menuBar,
-.footer {
-	width: 700px;
 }
 }
 
@@ -60,7 +44,7 @@ a:hover {
   display: block;
 }
 
-.menuBar-buttons > li > a {
+.menuBar-buttons ul > li > a {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
@@ -69,10 +53,10 @@ a:hover {
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
   display: block;
-  width: 200px;
+  font-family: 'Amatic SC', cursive;
 }
-.menuBar-buttons > li > a:hover,
-.menuBar-buttons > li > a:focus {
+.menuBar-buttons ul > li > a:hover,
+.menuBar-buttons ul > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
@@ -84,18 +68,9 @@ a:hover {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .menuBar-buttons {
-    float: right;
-	display: table-row;
-  }
-}
-
 #mainMenu {
 	display: inline-block;
+	border: 0px;
 }
 
 #mainMenu ul {
@@ -104,26 +79,38 @@ a:hover {
     padding: 0;
 }
 
-#mainMenu ul li a {
-
-}
-
 .page-contents {
 	display: table;
 	width: 100%;
 	height: 100%; /* For at least Firefox */
 	min-height: 100%;
-	background-color: #7ba2e0;
-	background-size: 100%;
+	background-color: #222;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #names-heading {
-	font-family: 'Tangerine', serif;
+	font-family: 'Amatic SC', cursive;
 	font-size: 100px;
-	text-shadow: 3px 3px #000000;
 	font-weight:900;
+	color: white;
+	margin-top:50px;
+	line-height: 135px;
+}
+
+#subHeading {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
+	font-weight:900;
+	color: white;
+}
+
+#couple-heading {
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 75px;
+	font-weight:900;
+	color: white;
 }
 
 .display-content {
@@ -133,21 +120,24 @@ a:hover {
 }
 
 #locationText {
-	font-family: 'Tangerine', serif;
-	font-size: 30px;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
 	font-weight:900;
+	color: white;
 }
 
 #venueText {
-	font-family: 'Tangerine', serif;
-	font-size: 30px;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
 	font-weight:900;
+	color: white;
 }
 
 #ceremonyDateText {
-	font-family: 'Tangerine', serif;
-	font-size: 30px;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 40px;
 	font-weight:900;
+	color: white;
 }
 
 .panel {
@@ -161,4 +151,34 @@ a:hover {
 .paddedImage {
 	padding: 10px;
 	
+}
+
+.menuLink {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+  display: block;
+  font-family: 'Amatic SC', cursive;
+  font-size:30px;
+}
+.menuLink:hover,
+.menuLink:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+	border-bottom-color: rgba(255,255,255,0);
+}
+.menuBar-buttons > .active > .menuLink,
+.menuBar-buttons > .active > .menuLink:hover,
+.menuBar-buttons > .active > .menuLink:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.captionBlock {
+	background-color: rgba(0, 0, 0, 0.15);
+    border: 0px;
 }

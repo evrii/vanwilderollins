@@ -5,4 +5,28 @@
 #mainLogo{
   width: 110px;
   height:110px;
-}}
+}
+
+#mainCaption{
+	float: right;
+}
+
+#mainMenu{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+#greetingBlock {
+	background-color: rgba(0, 0, 0, 0.15);
+	border: 0px;
+}
