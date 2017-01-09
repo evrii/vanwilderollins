@@ -9,6 +9,8 @@
 
 #mainCaption{
 	float: right;
+	margin-right: 40px;
+    margin-top: 30px;
 }
 
 #mainMenu{
