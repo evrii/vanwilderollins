@@ -20,29 +20,118 @@
 
     <!-- Custom styles for this template -->
 	<link href="../css/vanwilde.css" rel="stylesheet">
+	<link href="../css/party.css" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   </head>
 
   <body>
     <div class="page-contents">
-		<nav id="mainMenu">
-			<ul class="nav menuBar-buttons">
-			  <li><a href="..">Home</a></li>
-			  <li><a href="../story">Our Story</a></li>
-			  <li><a href="../venue">Venue</a></li>
-			  <li class="active"><a href="../party">Wedding Party</a></li>
-			  <li><a href="../amenities">Local Amenities</a></li>
-			  <li><a href="../registry">Registry</a></li>
-			</ul>
+	    <nav id="mainMenu" class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="nav menuBar-buttons">
+							<div class="col-md-12">
+							  <div class="col-xs-2">
+								<li class="active"><a class="menuLink" href="..">Home</a></li>
+							  </div>
+							  <div class="col-xs-2">
+								<li><a class="menuLink" href="../story">Our Story</a></li>
+							  </div>
+							  <div class="col-xs-2">
+								<li><a class="menuLink" href="../venue">Venue</a></li>
+							  </div>
+							  <div class="col-xs-2">
+								<li><a class="menuLink" href="../party">Wedding Party</a></li>
+							  </div>
+							  <div class="col-xs-2">
+								<li><a class="menuLink" href="../amenities">Local Amenities</a></li>
+							  </div>
+							  <div class="col-xs-2">
+								<li><a class="menuLink" href="../registry">Registry</a></li>
+							  </div>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</nav>
 
 		<div class="displayArea">
 
 			<div class="row">
 
-				<div id="names-heading">Party</div>
+				<div id="names-heading">Wedding Party</div>
+				<div id="partyNames" class="col-md-3 col-xs-5">
+					<div id="bridesmaids" class="col-md-6 col-xs-12">
+							<div class="col-xs-12 bridesmaid partyMember" data-name="laurad">
+								<div class="partyName">Laura D.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="kara">
+								<div class="partyName">Kara B.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="tanmayi">
+								<div class="partyName">Tanmayi G.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="leila">
+								<div class="partyName">Leila R.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="laurag">
+								<div class="partyName">Laura G.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="carly">
+								<div class="partyName">Carly H.</div>
+							</div>
+							<div class="col-xs-12 bridesmaid partyMember" data-name="jess">
+								<div class="partyName">Jess H.</div>
+							</div>
+					</div>
+					<div id="groomsmen" class="col-md-6 col-xs-12">
+						<div class="col-xs-12 groomsman partyMember" data-name="chris">
+							<div class="partyName">Chris R.</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="matt">
+							<div class="partyName">Matt R.</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="brian">
+							<div class="partyName">Brian R.</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="bubar">
+							<div class="partyName">Bubar</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="stephen">
+							<div class="partyName">Stephen D.</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="anders">
+							<div class="partyName">Anders S.</div>
+						</div>
+						<div class="col-xs-12 groomsman partyMember" data-name="john">
+							<div class="partyName">John H.</div>
+						</div>
+					</div>
+				</div>
+				<div id="galleryContainer" class="col-md-8 col-xs-4">
+					<div id="partyGallery" class="col-md-6">
+						<img id="lauradPhoto" src="../images/laurad.jpg" />
+						<img id="karaPhoto" src="../images/kara.jpg" />
+						<img id="tanmayiPhoto" src="../images/tanmayi.jpg" />
+						<img id="leilaPhoto" src="../images/leila.jpg" />
+						<img id="lauragPhoto" src="../images/laurag.jpg" />
+						<img id="carlyPhoto" src="../images/carly.jpg" />
+						<img id="jessPhoto" src="../images/jess.jpg" />
+						<img id="chrisPhoto" src="../images/chris.jpg" />
+						<img id="mattPhoto" src="../images/matt.jpg" />
+						<img id="brianPhoto" src="../images/brian.jpg" />
+						<img id="bubarPhoto" src="../images/bubar.jpg" />
+						<img id="stephenPhoto" src="../images/stephen.jpg" />
+						<img id="andersPhoto" src="../images/anders.jpg" />
+						<img id="johnPhoto" src="../images/john.jpg" />
+					</div>
+				</div>
 
 			</div>
 
@@ -58,5 +147,6 @@
     <script src="../js/bootstrap/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/party.js"></script>
   </body>
 </html>

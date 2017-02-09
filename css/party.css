@@ -1,0 +1,112 @@
+@media (min-width: 1200px) {
+	#galleryContainer{
+		position: fixed;
+		left: 26%;
+		top: 19%;
+	}
+}
+
+@media (max-width: 1199px) {
+	#galleryContainer{
+		position: fixed;
+		left: 40%;
+		top: 19%;
+	}
+}
+
+.partyMember {
+	box-sizing:border-box;
+}
+.bridesmaid {
+	background-color: pink;
+	height: 10vh;
+	border: 10px;
+	border-color: black;
+	border-style: solid;
+    border-width: 5px;
+}
+
+.groomsman {
+	background-color: CornflowerBlue;
+	height: 10vh;
+	border: 10px;
+	border-color: black;
+	border-style: solid;
+    border-width: 5px;
+}
+
+.partyName {
+  line-height: 10vh;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+  display: block;
+  font-family: 'Amatic SC', cursive;
+  font-size:250%;
+  text-shadow: 2px 2px #000000;
+}
+
+.seven-cols {
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+	
+@media (min-width: 768px){
+  .seven-cols .col-xs-1,
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-xs-1,
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */    
+@media (min-width: 1200px) {
+  .seven-cols .col-xs-1,
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+#partyGallery {
+	position: relative;
+}
+
+@media (min-width: 1200px) {
+	#partyGallery img {
+		display: none;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 70vh;
+	}
+}
+@media (max-width: 1199px) {
+	#partyGallery img {
+		display: none;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 35vh;
+	}
+}
+
+#partyGallery .currentPhoto {
+	display: block;
+}

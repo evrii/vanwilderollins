@@ -92,7 +92,7 @@ a:hover {
 
 #names-heading {
 	font-family: 'Amatic SC', cursive;
-	font-size: 100px;
+	font-size: 14vh;
 	font-weight:900;
 	color: white;
 	margin-top:50px;
@@ -108,7 +108,7 @@ a:hover {
 
 #couple-heading {
 	font-family: 'Shadows Into Light Two', cursive;
-	font-size: 75px;
+	font-size: 10vh;
 	font-weight:900;
 	color: white;
 }
@@ -121,21 +121,21 @@ a:hover {
 
 #locationText {
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 20px;
+	font-size: 3vh;
 	font-weight:900;
 	color: white;
 }
 
 #venueText {
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 20px;
+	font-size: 2.5vh;
 	font-weight:900;
 	color: white;
 }
 
 #ceremonyDateText {
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 40px;
+	font-size: 5vh;
 	font-weight:900;
 	color: white;
 }
@@ -163,7 +163,7 @@ a:hover {
   border-bottom: 2px solid transparent;
   display: block;
   font-family: 'Amatic SC', cursive;
-  font-size:30px;
+  font-size:100%;
 }
 .menuLink:hover,
 .menuLink:focus {
