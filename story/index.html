@@ -13,6 +13,9 @@
 	<!-- styles -->
 	    <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	<link href="../css/vanwilde.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../css/bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -61,122 +64,92 @@
   
   
 <body>
-	<div class="page-contents">
-	    <nav id="mainMenu" class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<ul class="nav menuBar-buttons">
-							<div class="col-xs-12">
-							  <div class="col-xs-2">
-								<li class="active"><a class="menuLink" href="..">Home</a></li>
-							  </div>
-							  <div class="col-xs-2">
-								<li><a class="menuLink" href="../story">Our Story</a></li>
-							  </div>
-							  <div class="col-xs-2">
-								<li><a class="menuLink" href="../venue">Venue</a></li>
-							  </div>
-							  <div class="col-xs-2">
-								<li><a class="menuLink" href="../party">Wedding Party</a></li>
-							  </div>
-							  <div class="col-xs-2">
-								<li><a class="menuLink" href="../amenities">Local Amenities</a></li>
-							  </div>
-							  <div class="col-xs-2">
-								<li><a class="menuLink" href="../registry">Registry</a></li>
-							  </div>
-							</div>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<div id="storyContent" class="displayArea">
+	<nav id="mainMenu" class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-3 col-xs-offset-3">
-					<!-- carousel -->
-					<div id="my_carousel" class="carousel fade" data-ride="carousel">
-					<!-- methods: data-interval="3000" // seconds between transitions; set to "0" to make it not automatic
-								  data-pause="false" // "hover" is the default
-								  data-wrap="false" // "true" is the default
-					-->
-						
-						<!-- carousel images -->
-						<div class="carousel-inner">
-							<div class="item active">
-								<img class="img-responsive" src="../images/engagement_beach.jpg" alt="carousel_image_1">
-							</div>
-							<div class="item">
-								<img class="img-responsive" src="../images/Dance_Adjusted.jpg" alt="carousel_image_2">
-							</div>
-							<div class="item">
-								<img class="img-responsive" src="../images/SaraEric-8.jpg" alt="carousel_image_3">
-							</div>
-							<div class="item">
-								<img class="img-responsive" src="../images/photoshoot.jpg" alt="carousel_image_3">
-							</div>
-							
+				<div class="col-xs-12">
+					<ul class="nav menuBar-buttons">
+						<div class="col-xs-12">
+						  <div class="col-xs-2">
+							<li class="active"><a class="menuLink" href="..">Home</a></li>
+						  </div>
+						  <div class="col-xs-2">
+							<li><a class="menuLink" href="../story">Our Story</a></li>
+						  </div>
+						  <div class="col-xs-2">
+							<li><a class="menuLink" href="../venue">Venue</a></li>
+						  </div>
+						  <div class="col-xs-2">
+							<li><a class="menuLink" href="../party">Wedding Party</a></li>
+						  </div>
+						  <div class="col-xs-2">
+							<li><a class="menuLink" href="../amenities">Local Amenities</a></li>
+						  </div>
+						  <div class="col-xs-2">
+							<li><a class="menuLink" href="../registry">Registry</a></li>
+						  </div>
 						</div>
-						
-						<!-- side buttons -->
-							<!-- href referrs to the id of the carousel -->
-							<a class="left carousel-control" href="#my_carousel" role="button" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left"></span>
-							</a>
-							<a class="right carousel-control" href="#my_carousel" role="button" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right"></span>
-							</a>
-					
-					</div> <!-- end .carousel -->
+					</ul>
 				</div>
-				
-				
-				
-				
-				<div class="col-xs-4">
-					<div id="names-heading">Our Story</div>
-					<div class="captionBlock">
-						Both our ceremony and reception will be at Dell Lea. 
-						Located in Chichester, New Hampshire, Dell Lea is post and beam function
-						hall located on 236 private and picturesque acres. Spread amongst the property, 
-						you can find beautiful stone walls, a custom-made gazebo, awaterfall, open fields, 
-						ledge outcroppings, a country lane and several small ponds.
-						
-						Both our ceremony and reception will be at Dell Lea. 
-						Located in Chichester, New Hampshire, Dell Lea is post and beam function
-						hall located on 236 private and picturesque acres. Spread amongst the property, 
-						you can find beautiful stone walls, a custom-made gazebo, awaterfall, open fields, 
-						ledge outcroppings, a country lane and several small ponds.
-						
-						Both our ceremony and reception will be at Dell Lea. 
-						Located in Chichester, New Hampshire, Dell Lea is post and beam function
-						hall located on 236 private and picturesque acres. Spread amongst the property,
-						you can find beautiful stone walls, a custom-made gazebo, awaterfall, open fields, 
-						ledge outcroppings, a country lane and several small
-					</div>
-				</div>
-				
-				
-				
-				
-				
-				
 			</div>
-			
-		</div> <!-- end .container -->
-	</div>
-	
-	
+		</div>
+	</nav>
+	<div class="page-contents">
+	    
+		<div class="displayArea">
+			<div id="story-heading">Our Story</div>
+			<div id="galleryContainer">
+				<img id="Photo0" data-index="0" class="storyPhoto" src="../images/skating.jpg" />
+				<img id="Photo1" data-index="1" class="storyPhoto" src="../images/dogs.jpg" />
+				<img id="Photo2" data-index="2" class="storyPhoto" src="../images/acadia.jpg" />
+				<img id="Photo3" data-index="3" class="storyPhoto" src="../images/chicago.jpg" />
+				<img id="Photo4" data-index="4" class="storyPhoto" src="../images/engagement.jpg" />
+				<img id="Photo5" data-index="5" class="storyPhoto" src="../images/snow.jpg" />
+				<img id="Photo6" data-index="6" class="storyPhoto" src="../images/marathon.jpg" />
+				<img id="Photo7" data-index="7" class="storyPhoto" src="../images/pizza.jpg" />
+				<img id="Photo8" data-index="8" class="storyPhoto" src="../images/photoshoot.jpg" />
+				<img id="Photo9" data-index="9" class="storyPhoto" src="../images/b2b.jpg" />
+				<button id="backwardButton" type="button" class="btn btn-nav"><span><</span></button>
+				<button id="forwardButton" type="button" class="btn btn-nav"><span>></span></button>
+			</div>
+			<div id="storyContainer">
+				<div class="col-xs-6 bridesmaid partyMember" data-index="jess">
+					<div class="partyName">Who's Sara?</div>
+				</div>
+				<div class="col-xs-6 groomsman partyMember" data-index="bubar">
+					<div class="partyName">Who's Eric?</div>
+				</div>
+				<div class="storyTextContainer">
+					<div>&emsp; One Friday evening in late November 2015, we were blessed with a notification on eHarmony. 
+						We arrived into each other's inboxes and landed into each other's lives.
+						After talking for a little less than a week, we had our first date, and it
+						was as if we already knew each other. Conversation flowed easily and our 
+						relationship began.</div>
+
+					<div>&emsp; In a little over a year, we have experienced so much together and most of 
+						it has been with you all! Dances, concerts, road trips, births, deaths, smiles,
+						and tears. In a year, we have seen each other at highs and lows. Between the
+						extremes, we have experienced everyday life together.</div>
+
+
+					<div>&emsp; With this all in mind, we are thrilled to entering into marriage together. This is
+						a union that we do not take lightly. We are excited for you to join with us as we commit
+						to loving and serving each other for the rest of our lives. </div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+    </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="./js/vendor/jquery-3.1.1.js"><\/script>')</script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-</body>
-  
+	<script src="../js/story.js"></script>
+  </body>
 </html>

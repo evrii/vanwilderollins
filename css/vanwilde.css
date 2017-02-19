@@ -22,10 +22,8 @@ a:hover {
 }
 
 .displayArea {
-	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
-}
 }
 
 /*
@@ -44,17 +42,6 @@ a:hover {
   display: block;
 }
 
-.menuBar-buttons ul > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-  display: block;
-  font-family: 'Amatic SC', cursive;
-}
 .menuBar-buttons ul > li > a:hover,
 .menuBar-buttons ul > li > a:focus {
   background-color: transparent;
@@ -69,8 +56,12 @@ a:hover {
 }
 
 #mainMenu {
-	display: inline-block;
 	border: 0px;
+	position: fixed;
+	left: 0;
+	right:0;
+	height: 30px;
+	min-height: 30px;
 }
 
 #mainMenu ul {
@@ -82,7 +73,6 @@ a:hover {
 .page-contents {
 	display: table;
 	width: 100%;
-	height: 100%; /* For at least Firefox */
 	min-height: 100%;
 	background-color: #222;
 	background-size: contain;
@@ -96,7 +86,6 @@ a:hover {
 	font-weight:900;
 	color: white;
 	margin-top:50px;
-	line-height: 135px;
 }
 
 #subHeading {
@@ -156,15 +145,28 @@ a:hover {
 .menuLink {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
   font-weight: bold;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
   display: block;
   font-family: 'Amatic SC', cursive;
-  font-size:100%;
+  display: table-cell;
+  text-align: center;
 }
+
+@media (min-width: 1200px) {
+	.menuLink {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.menuLink {
+		font-size: 1.5vh;
+	}
+}
+
 .menuLink:hover,
 .menuLink:focus {
   background-color: transparent;

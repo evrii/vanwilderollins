@@ -1,16 +1,16 @@
 @media (min-width: 1200px) {
 	#galleryContainer{
 		position: fixed;
-		left: 26%;
-		top: 19%;
+		left: 53%;
+		top: 25%;
 	}
 }
 
 @media (max-width: 1199px) {
 	#galleryContainer{
 		position: fixed;
-		left: 40%;
-		top: 19%;
+		left: 48%;
+		top: 30%;
 	}
 }
 
@@ -103,7 +103,7 @@
 		position: absolute;
 		left: 0px;
 		top: 0px;
-		height: 35vh;
+		height: 28vh;
 	}
 }
 
