@@ -8,11 +8,13 @@ $( document ).ready(function() {
 
 	function changeSelectedMember(member) {
 		var activeOffset = member.offset();
+		
 		$("#zebra").animate({top:activeOffset.top,
 							 left: activeOffset.left,
 							 width: member.outerWidth(true),
 							 height: member.outerHeight(true)},
 							 TRANSITION_TIME);
+
 		if(previousPhoto){
 		  $(previousPhoto).fadeOut(TRANSITION_TIME, function(){
 		  $(previousPhoto).removeClass('active');});
@@ -57,7 +59,7 @@ $( document ).ready(function() {
 	$(newDiv).css("z-index",9001);
 	//$(newDiv).css("box-sizing","content-box");
 
-	document.body.insertBefore(newDiv, $(".page-contents")[0]); 
+	$("body").prepend(newDiv); 
 
 	changeSelectedMember(activeMember);
 
