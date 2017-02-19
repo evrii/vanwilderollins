@@ -1,12 +1,19 @@
 html,
 body {
 	height: 100%;
+	width: 100%;
+	$(window).scrollTop()
 
 }
 
 body {
+	background-color: #222;
 	color: #fef;
 	text-align: center;
+}
+
+.displayArea .row {
+	background-color: #222;
 }
 
 /* Links */

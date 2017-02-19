@@ -8,13 +8,14 @@ $( document ).ready(function() {
 
 	function changeSelectedMember(member) {
 		var activeOffset = member.offset();
-		
+		window.scrollTo(0, activeOffset.top);
+		$("window").animate({ scrollTop: activeOffset.top - 500 }, 100000, "swing");
 		$("#zebra").animate({top:activeOffset.top,
 							 left: activeOffset.left,
 							 width: member.outerWidth(true),
 							 height: member.outerHeight(true)},
 							 TRANSITION_TIME);
-
+		window.scrollTo(0, activeOffset.top - 500);
 		if(previousPhoto){
 		  $(previousPhoto).fadeOut(TRANSITION_TIME, function(){
 		  $(previousPhoto).removeClass('active');});

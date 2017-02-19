@@ -101,7 +101,7 @@
 	#partyGallery img {
 		display: none;
 		position: absolute;
-		left: 0px;
+		left: 10px;
 		top: 0px;
 		height: 28vh;
 	}
