@@ -7,26 +7,36 @@ $( document ).ready(function() {
 		previousPhoto = $("#partyGallery .currentPhoto");
 		changeSelectedMember($(this));
     });
+	
+	$(window).on('resize', function(){
+		activeOffset = activeMember.offset();
+		$("#zebra").animate({top:activeOffset.top,
+							 left: activeOffset.left,
+							 width: activeMember.outerWidth(true),
+							 height: activeMember.outerHeight(true)},
+							 TRANSITION_TIME/2);
+	});
 
 	function changeSelectedMember(member) {
-		var activeOffset = member.offset();
+		activeMember = member;
+		activeOffset = activeMember.offset();
 		window.scrollTo(0, activeOffset.top);
 		$("window").animate({ scrollTop: activeOffset.top - 500 }, 100000, "swing");
 		$("#zebra").animate({top:activeOffset.top,
 							 left: activeOffset.left,
-							 width: member.outerWidth(true),
-							 height: member.outerHeight(true)},
+							 width: activeMember.outerWidth(true),
+							 height: activeMember.outerHeight(true)},
 							 TRANSITION_TIME);
 		window.scrollTo(0, activeOffset.top - 500);
 		if(previousPhoto){
 		  $(previousPhoto).fadeOut(TRANSITION_TIME, function(){
 		  $(previousPhoto).removeClass('currentPhoto');});
-		  $("#"+member.attr("data-name")+ "Photo").fadeIn(TRANSITION_TIME).addClass('currentPhoto');
+		  $("#"+activeMember.attr("data-name")+ "Photo").fadeIn(TRANSITION_TIME).addClass('currentPhoto');
 		}
-		nextMember = getNextMember(member);
+		nextMember = getNextMember(activeMember);
 		currentTimeout = setTimeout(function() 
 		{
-			previousPhoto = $("#"+member.attr("data-name")+ "Photo");
+			previousPhoto = $("#"+activeMember.attr("data-name")+ "Photo");
 			changeSelectedMember(nextMember);
 		}, READ_TIME);
 	}
