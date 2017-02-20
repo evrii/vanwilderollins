@@ -3,7 +3,9 @@ const TRANSITION_TIME = 2000;
 
 $( document ).ready(function() {
     $(".partyMember").on("click", function(){
-        console.log("The paragraph was clicked.");
+		window.clearTimeout(currentTimeout);
+		previousPhoto = $("#partyGallery .currentPhoto");
+		changeSelectedMember($(this));
     });
 
 	function changeSelectedMember(member) {
@@ -18,11 +20,11 @@ $( document ).ready(function() {
 		window.scrollTo(0, activeOffset.top - 500);
 		if(previousPhoto){
 		  $(previousPhoto).fadeOut(TRANSITION_TIME, function(){
-		  $(previousPhoto).removeClass('active');});
-		  $("#"+member.attr("data-name")+ "Photo").fadeIn(TRANSITION_TIME).addClass('active');
+		  $(previousPhoto).removeClass('currentPhoto');});
+		  $("#"+member.attr("data-name")+ "Photo").fadeIn(TRANSITION_TIME).addClass('currentPhoto');
 		}
 		nextMember = getNextMember(member);
-		setTimeout(function() 
+		currentTimeout = setTimeout(function() 
 		{
 			previousPhoto = $("#"+member.attr("data-name")+ "Photo");
 			changeSelectedMember(nextMember);
@@ -45,6 +47,7 @@ $( document ).ready(function() {
 	var nextMember = "";
 	var activePhoto = "";
 	var previousPhoto = "";
+	var currentTimeout = -1;
 	$("#"+activeMember.attr("data-name")+ "Photo").addClass('currentPhoto');
 
 	var newDiv = document.createElement("div"); 

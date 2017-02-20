@@ -23,6 +23,35 @@ a:hover {
   color: #fff;
 }
 
+.bridesmaid {
+	background-color: pink;
+	height: 10vh;
+	border: 10px;
+	border-color: black;
+	border-style: solid;
+    border-width: 5px;
+}
+
+.bridesmaid:focus,
+.bridesmaid:hover {
+	background-color: #e2aab4;
+}
+
+.groomsman {
+	background-color: CornflowerBlue;
+	height: 10vh;
+	border: 10px;
+	border-color: black;
+	border-style: solid;
+    border-width: 5px;
+}
+
+.groomsman:focus,
+.groomsman:hover {
+	background-color: #5783d4;
+}
+
+
 .footer {
 	display: fixed;
 	bottom: 0;
