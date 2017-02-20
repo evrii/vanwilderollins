@@ -9,7 +9,7 @@
 @media (max-width: 1199px) {
 	#galleryContainer{
 		position: fixed;
-		left: 48%;
+		left: 30%;
 		top: 30%;
 	}
 }
@@ -71,7 +71,7 @@
 	position: relative;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 750px) {
 	#partyGallery img {
 		display: none;
 		position: absolute;
@@ -80,16 +80,20 @@
 		height: 70vh;
 	}
 }
-@media (max-width: 1199px) {
+@media (max-width: 749px) {
 	#partyGallery img {
 		display: none;
 		position: absolute;
-		left: 10px;
+		left: 5vw;
 		top: 0px;
-		height: 28vh;
+		width: 55vw;
 	}
 }
 
 #partyGallery .currentPhoto {
 	display: block;
+}
+
+#partyNames {
+	position: relative;
 }

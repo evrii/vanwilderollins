@@ -1,5 +1,6 @@
 const READ_TIME = 6000;
 const TRANSITION_TIME = 2000;
+const BUTTON_PADDING  = 15;
 
 $( document ).ready(function() {
     $(".partyMember").on("click", function(){
@@ -9,9 +10,10 @@ $( document ).ready(function() {
     });
 	
 	$(window).on('resize', function(){
-		activeOffset = activeMember.offset();
-		$("#zebra").animate({top:activeOffset.top,
-							 left: activeOffset.left,
+		activePosition = activeMember.position();
+		parentPosition = activeMember.parent().position()
+		$("#zebra").animate({top:parentPosition.top+activePosition.top,
+							 left: parentPosition.left+BUTTON_PADDING,
 							 width: activeMember.outerWidth(true),
 							 height: activeMember.outerHeight(true)},
 							 TRANSITION_TIME/2);
@@ -19,15 +21,21 @@ $( document ).ready(function() {
 
 	function changeSelectedMember(member) {
 		activeMember = member;
-		activeOffset = activeMember.offset();
-		window.scrollTo(0, activeOffset.top);
-		$("window").animate({ scrollTop: activeOffset.top - 500 }, 100000, "swing");
-		$("#zebra").animate({top:activeOffset.top,
-							 left: activeOffset.left,
+		activePosition = activeMember.position();
+		parentPosition = member.parent().position()
+		window.scrollTo(0, parentPosition.top+activePosition.top);
+		$("window").animate({ scrollTop: parentPosition.top+activePosition.top }, 100000, "swing");
+		$("#zebra").animate({top:parentPosition.top+activePosition.top,
+							 left: parentPosition.left+BUTTON_PADDING,
 							 width: activeMember.outerWidth(true),
 							 height: activeMember.outerHeight(true)},
 							 TRANSITION_TIME);
-		window.scrollTo(0, activeOffset.top - 500);
+		console.log("MEMBER:")
+		console.log(parentPosition.top+activePosition.top);
+		console.log(member.position().top);
+		console.log("ZEBRA:")
+		console.log($("#zebra").offset().top);
+		window.scrollTo(0, parentPosition.top+activePosition.top);
 		if(previousPhoto){
 		  $(previousPhoto).fadeOut(TRANSITION_TIME, function(){
 		  $(previousPhoto).removeClass('currentPhoto');});
@@ -62,10 +70,11 @@ $( document ).ready(function() {
 
 	var newDiv = document.createElement("div"); 
 
-	var activeOffset = activeMember.offset();
+	var activePosition = activeMember.position();
+	var parentPosition = activeMember.parent().position()
 	$(newDiv).attr("id","zebra");
-	$(newDiv).css("top",activeOffset.top);
-	$(newDiv).css("left",activeOffset.left);
+	$(newDiv).css("top",parentPosition.top+activePosition.top);
+	$(newDiv).css("left",parentPosition.left+BUTTON_PADDING);
 	$(newDiv).css("width",activeMember.outerWidth(true));
 	$(newDiv).css("height",activeMember.outerHeight(true));
 	$(newDiv).css("position","absolute");
@@ -73,7 +82,7 @@ $( document ).ready(function() {
 	$(newDiv).css("z-index",9001);
 	//$(newDiv).css("box-sizing","content-box");
 
-	$("body").prepend(newDiv); 
+	$("#partyNames").prepend(newDiv); 
 
 	changeSelectedMember(activeMember);
 
